@@ -4,6 +4,9 @@ This repo contains a simple python application that uses a webdriver to scrape
 the New York Time's daily sudoku puzzle and then solves it using a linear programming
 formulation.
 
+![alt text](https://mwcm.nyt.com/dam/mkt_assets/img/games/sudoku.png)
+<i>img from the NYT</i>
+
 ## Formulation
 The relaxed LP/IP formulation of sudoku is explained here: [https://vanderbei.princeton.edu/tex/talks/INFORMS_19/Sudoku.pdf]
 
