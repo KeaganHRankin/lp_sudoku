@@ -17,8 +17,8 @@ problem space and find this solution.
 - each cell must contain a number at the end: $\sum_{k}{x_{ijk}}=1$ for $i = 1,...,9$ ; $j = 1,...,9$
 - each row must contain each number k: $\sum_{j}{x_{ijk}}=1$ for $i = 1,...,9$ ; $k = 1,...,9$
 - each column must contain each number k: $\sum_{i}{x_{ijk}}=1$ for $j = 1,...,9$ ; $k = 1,...,9$
-- each nxn block in the sudoku contains each number k: $$\sum_{i=3i_0-2}^{3i_0}\sum_{j=3j_0-2}^{3j_0}{x_{ijk}}=1$ for $i_0 = 1,...,3$$ ; $j_0 = 1,...,3$
-- each known cell must have a value with k equal to the number in the cell: $x_{i,j,k} = 1  \;\; \forall \:i,j,k \in known$
+- each nxn block in the sudoku contains each number k: $\sum_{i=3i_0-2}^{3i_0}\sum_{j=3j_0-2}^{3j_0}{x_{ijk}}=1$ for $i_0 = 1,...,3$ ; $j_0 = 1,...,3$
+- each known cell must have a value with k equal to the number in the cell: $x_{i,j,k} = 1  \; \forall \:i,j,k \in known$
 
 
 ## Usage
