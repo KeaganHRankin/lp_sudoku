@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import time
 import re
+import numpy as np
 
 
 class NYTSudoku:

@@ -19,11 +19,7 @@ if __name__ == '__main__':
     
     # run scraper
     sudoku_scraper = NYTSudoku()
-    sudoku_scraper.open_webdriver()
-    retreived = sudoku_scraper.retrieve()
-    sudoku_scraper.close_webdriver()
-
-    retreived = np.array(retreived)
+    retreived = sudoku_scraper.nyt_pipeline()
 
     # run optimization
     sudoku_optimizer = SudokuSolver()

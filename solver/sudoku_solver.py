@@ -22,7 +22,7 @@ class SudokuSolver:
         # create solver using OR tools linear solver
         solver = pywraplp.Solver('Sudoku Solver', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
         if not solver:
-            print('Solver error, exiting.')
+            print('Solver error, install package. exiting')
             return
 
         # Defining i,j,k variable
@@ -76,8 +76,6 @@ class SudokuSolver:
         status = solver.Solve()
 
         results = np.zeros((9,9)).astype(np.int32)
-        status_d = {0:'OPTIMAL', 1:'FEASIBLE', 2:'INFEASIBLE', 3:'UNBOUNDED', 
-            4:'ABNORMAL', 5:'MODEL_INVALID', 6:'NOT_SOLVED'}
 
         # store results or except
         if status == pywraplp.Solver.OPTIMAL:
@@ -85,6 +83,6 @@ class SudokuSolver:
                 for j in j_r:
                     results[i,j] = sum((k + 1) * int(x[i, j, k].solution_value()) for k in k_r)
         else:
-            raise Exception('Unfeasible Sudoku: {}'.format(status_d[status]))
+            raise Exception('Sudoku solver error, potentially unfeasible')
 
         return results
