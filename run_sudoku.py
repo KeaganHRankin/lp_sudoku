@@ -19,6 +19,8 @@ if __name__ == '__main__':
     
     # run scraper
     sudoku_scraper = NYTSudoku()
+    sudoku_scraper.difficulty = 'hard'
+    sudoku_scraper.path = 'scraper/selenium webdriver/chromedriver.exe'
     retreived = sudoku_scraper.nyt_pipeline()
 
     # run optimization
